@@ -15,7 +15,7 @@ Skills in `.claude/skills/` travel with the repo, so anyone who clones the proje
 ### New project
 
 ```bash
-git clone <this-repo-url> my-project
+git clone https://github.com/FrederikEupry/agent-workflow-template.git my-project
 cd my-project
 rm -rf .git && git init
 ```
@@ -25,8 +25,8 @@ Open it in Claude Code and run `/init-project`. The folder is empty, so it inter
 ### Existing project
 
 ```bash
-git clone <this-repo-url>
-./eupry-claude-workflow/install.sh /path/to/your/project
+git clone https://github.com/FrederikEupry/agent-workflow-template.git
+./agent-workflow-template/install.sh /path/to/your/project
 ```
 
 The installer copies the workflow files and skips anything that already exists, so your current CLAUDE.md or docs are safe. Then open the project in Claude Code and run `/init-project`. With code present, it analyzes the repo instead of interviewing you: it sweeps the codebase with subagents, fills the memory bank with cited facts, and only asks you what the code can't answer (vision, users, non-goals).
