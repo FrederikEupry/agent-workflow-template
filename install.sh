@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Install the workflow scaffold into a target project.
 # Usage: ./install.sh /path/to/project
-# Copies AGENTS.md, CLAUDE.md, memory-bank/, tasks/, and .claude/skills/.
+# Copies AGENTS.md, CLAUDE.md, memory-bank/, and .claude/skills/,
+# and appends those paths to the target's .gitignore so they stay local.
 # Never overwrites: existing files in the target are skipped and reported.
 
 set -euo pipefail
@@ -47,14 +48,28 @@ for f in "$SRC"/memory-bank/*.md; do
 done
 mkdir -p "$TARGET/memory-bank/tasks"
 
-for f in "$SRC"/tasks/*.md; do
-  copy_file "tasks/$(basename "$f")"
-done
-
 for skill in "$SRC"/.claude/skills/*/; do
   name="$(basename "$skill")"
   copy_file ".claude/skills/$name/SKILL.md"
 done
+
+GITIGNORE="$TARGET/.gitignore"
+MARKER="# --- claude-workflow scaffold (added by install.sh) ---"
+if [[ -f "$GITIGNORE" ]] && grep -qF "$MARKER" "$GITIGNORE"; then
+  echo "skip (exists): .gitignore scaffold entries"
+else
+  {
+    if [[ -s "$GITIGNORE" ]]; then echo; fi
+    echo "$MARKER"
+    echo "/AGENTS.md"
+    echo "/CLAUDE.md"
+    echo "/memory-bank/"
+    for skill in "$SRC"/.claude/skills/*/; do
+      echo "/.claude/skills/$(basename "$skill")/"
+    done
+  } >> "$GITIGNORE"
+  echo "updated:       .gitignore (scaffold entries appended)"
+fi
 
 echo
 echo "Done: $copied copied, $skipped skipped (already existed)."

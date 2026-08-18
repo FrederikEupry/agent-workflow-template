@@ -15,8 +15,10 @@ Per AGENTS.md: Fast Track loads the current month README; Standard Discovery add
 | [quick-start.md](quick-start.md) | Commands, tool cheat sheet, session data |
 | [build-deployment.md](build-deployment.md) | Local setup, deploy procedure + post-deploy checklist |
 | [testing-patterns.md](testing-patterns.md) | Test strategies, verification gates |
+| [todo.md](todo.md) | Current plan as checkable items + review section |
+| [lessons.md](lessons.md) | Patterns learned from corrections (review at session start) |
 | tasks/YYYY-MM/README.md | Monthly task log (current) |
 
-Repo root: `AGENTS.md` (process protocol), `CLAUDE.md` (reasoning style + repo hard rules), `tasks/todo.md`, `tasks/lessons.md`.
+Repo root: `AGENTS.md` (process protocol), `CLAUDE.md` (reasoning style + repo hard rules). Everything else the workflow writes lives in this folder.
 
 <!-- init-project: add optional files here when the project needs them (e.g. database-schema.md for data-heavy projects). Update this table whenever a memory-bank file is added or removed. -->

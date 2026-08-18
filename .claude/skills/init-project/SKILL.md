@@ -9,7 +9,7 @@ Set up the memory-bank workflow in the current folder. Two modes, chosen automat
 
 ## Step 0 — verify the scaffold is present
 
-Check for `AGENTS.md`, `CLAUDE.md`, `memory-bank/`, and `tasks/` in the repo root.
+Check for `AGENTS.md`, `CLAUDE.md`, and `memory-bank/` in the repo root.
 
 - If missing and this skill arrived via the workflow template repo, copy them from the template (same source this `.claude/skills/` folder came from, or run its `install.sh`).
 - If you cannot locate the template, ask the user for its path or URL. Do not improvise a different structure — AGENTS.md is the canonical spec.
@@ -18,7 +18,7 @@ Read `AGENTS.md` §3 (Memory Bank) before writing anything.
 
 ## Step 1 — detect mode
 
-Look at the repo root, ignoring the workflow files themselves (`AGENTS.md`, `CLAUDE.md`, `memory-bank/`, `tasks/`, `.claude/`, `README.md`, `.git`, `install.sh`, dotfiles).
+Look at the repo root, ignoring the workflow files themselves (`AGENTS.md`, `CLAUDE.md`, `memory-bank/`, `.claude/`, `README.md`, `.git`, `install.sh`, dotfiles).
 
 - **Nothing else there → Interview mode** (greenfield project).
 - **Source code, configs, or docs present → Analysis mode** (existing project).

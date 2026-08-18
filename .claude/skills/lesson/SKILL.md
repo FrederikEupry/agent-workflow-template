@@ -1,16 +1,16 @@
 ---
 name: lesson
-description: Capture a correction or hard-won rule into tasks/lessons.md. Use after the user corrects the agent, or when the user says "lesson", "remember this", or "never do that again".
+description: Capture a correction or hard-won rule into memory-bank/lessons.md. Use after the user corrects the agent, or when the user says "lesson", "remember this", or "never do that again".
 ---
 
 # Lesson
 
-Append one entry to `tasks/lessons.md` capturing a pattern that prevents a repeat mistake.
+Append one entry to `memory-bank/lessons.md` capturing a pattern that prevents a repeat mistake.
 
 ## Steps
 
 1. Identify the correction: what did the agent do, what did the user correct it to, and what general rule prevents the same class of mistake (not just this instance).
-2. Append to `tasks/lessons.md`, newest first, in the established format:
+2. Append to `memory-bank/lessons.md`, newest first, in the established format:
    ```
    - **YYYY-MM-DD — [Rule in one bold sentence.]** [One or two sentences: what went wrong and what the rule prevents.]
    ```

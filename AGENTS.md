@@ -167,6 +167,8 @@ memory-bank/
 ├── database-schema.md        # Data models (if applicable)
 ├── build-deployment.md       # Build/deploy procedures
 ├── testing-patterns.md       # Test strategies
+├── todo.md                   # Current plan, checkable items (per task)
+├── lessons.md                # Rules learned from corrections (after corrections)
 └── tasks/
     ├── YYYY-MM/
     │   ├── README.md         # Monthly summary (month end)
@@ -187,6 +189,8 @@ memory-bank/
 | `progress.md` | Current state | Session start | Major features done |
 | `projectRules.md` | Coding standards | When uncertain | New patterns emerge |
 | `decisions.md` | Why X over Y | Arch decisions | Arch decisions made |
+| `todo.md` | Current plan (checkable items) | Every task | Plan written / steps done |
+| `lessons.md` | Rules from corrections | Session start | After any correction |
 | `tasks/*/README.md` | Monthly summary | Month-specific work | Month end/milestone |
 | `tasks/*/*.md` | Task documentation | Investigating issues | After approval only |
 

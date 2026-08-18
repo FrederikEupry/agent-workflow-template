@@ -8,7 +8,7 @@ Three parts:
 - **CLAUDE.md** — reasoning style. Plan mode by default, subagents for research, verify before claiming done, capture lessons after corrections.
 - **memory-bank/** — the agent's only persistent memory. Project brief, architecture patterns, tech context, active work, decisions, plus a monthly task log. Sessions start by reading it and end by updating it.
 
-Skills in `.claude/skills/` travel with the repo, so anyone who clones the project gets the same commands.
+Skills in `.claude/skills/` come along with the scaffold, so every project set up this way has the same commands. In the new-project route they're committed and travel with the repo; in the existing-project route the installer gitignores them, so each teammate installs their own copy.
 
 ## Setup
 
@@ -29,7 +29,7 @@ git clone https://github.com/FrederikEupry/agent-workflow-template.git
 ./agent-workflow-template/install.sh /path/to/your/project
 ```
 
-The installer copies the workflow files and skips anything that already exists, so your current CLAUDE.md or docs are safe. Then open the project in Claude Code and run `/init-project`. With code present, it analyzes the repo instead of interviewing you: it sweeps the codebase with subagents, fills the memory bank with cited facts, and only asks you what the code can't answer (vision, users, non-goals).
+The installer copies the workflow files and skips anything that already exists, so your current CLAUDE.md or docs are safe. It also appends the installed paths to the project's `.gitignore` (in a clearly marked block), so the workflow stays local to your machine and out of the team's repo — teammates who want it run `install.sh` themselves. If you'd rather commit the workflow for the whole team, just delete that block from `.gitignore`. Then open the project in Claude Code and run `/init-project`. With code present, it analyzes the repo instead of interviewing you: it sweeps the codebase with subagents, fills the memory bank with cited facts, and only asks you what the code can't answer (vision, users, non-goals).
 
 ## Daily use
 
@@ -38,7 +38,7 @@ The installer copies the workflow files and skips anything that already exists, 
 | `startup` | Activates the flow: compliance statement, memory bank loaded, lessons reviewed |
 | `/init-project` | Bootstraps the structure (once per project) |
 | `/document` | Runs the DOCS state: task doc, monthly README, memory-bank updates |
-| `/lesson` | Captures a correction into `tasks/lessons.md` so it doesn't happen twice |
+| `/lesson` | Captures a correction into `memory-bank/lessons.md` so it doesn't happen twice |
 
 The state machine does the rest. Claude plans, you approve, it builds and tests, you approve again, then it applies and documents. Nothing is applied and nothing is documented without your explicit go-ahead.
 
