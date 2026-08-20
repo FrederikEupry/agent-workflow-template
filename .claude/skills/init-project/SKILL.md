@@ -57,7 +57,7 @@ Fill, at minimum: `projectbrief.md`, `techContext.md`, `systemPatterns.md`, `qui
 
 ## Hard rules
 
-- `CLAUDE.md` and `AGENTS.md` are identical copies (only the title line and the sync note differ). Any edit to one must be mirrored in the other.
+- `CLAUDE.md` and `AGENTS.md` are identical copies (only the title line differs). Any edit to one must be mirrored in the other.
 - Never overwrite non-template content without showing a diff and getting approval.
 - Never fabricate facts to make a memory-bank file look complete. A short honest file beats a padded one.
 - Placeholders (`[PROJECT NAME]`, `<!-- init-project: ... -->`) must all be gone or converted to explicit open items by the time you finish.

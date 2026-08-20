@@ -2,8 +2,6 @@
 
 Activate flow when user writes "startup".
 
-> This file is an identical copy of `CLAUDE.md` (the Claude Code entry file), for Codex, Cursor, Cline, and other AGENTS.md-based tools. If you edit one file, make the same edit in the other.
-
 ## Required Reading
 
 Before starting any task, read **WORKFLOW.md** in the repo root. It is the canonical process spec:
