@@ -1,6 +1,6 @@
 # Testing Patterns — [PROJECT NAME]
 
-<!-- init-project: how this project verifies work. Per AGENTS.md, QA must pass before APPROVAL. -->
+<!-- init-project: how this project verifies work. Per WORKFLOW.md, QA must pass before APPROVAL. -->
 
 ## Test strategy
 

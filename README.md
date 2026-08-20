@@ -1,11 +1,11 @@
 # Claude workflow scaffold
 
-The project setup I use for AI-assisted development, packaged so you can drop it into any repo. It gives Claude (or Cursor, Cline, Aider — anything AGENTS.md-compatible) persistent memory across sessions and a gated process for making changes.
+The project setup I use for AI-assisted development, packaged so you can drop it into any repo. It gives Claude (or Codex, Cursor, Cline, Aider — anything AGENTS.md-compatible) persistent memory across sessions and a gated process for making changes.
 
 Three parts:
 
-- **AGENTS.md** — the process spec. Session startup, the PLAN → BUILD → DIFF → QA → APPROVAL → APPLY → DOCS state machine, approval gates, budgets, compaction recovery.
-- **CLAUDE.md** — reasoning style. Plan mode by default, subagents for research, verify before claiming done, capture lessons after corrections.
+- **WORKFLOW.md** — the process spec. Session startup, the PLAN → BUILD → DIFF → QA → APPROVAL → APPLY → DOCS state machine, a fast track for small bug fixes, approval gates, stall detection, compaction recovery.
+- **CLAUDE.md + AGENTS.md** — the tool entry files: reasoning style plus a pointer to WORKFLOW.md. Subagents for research, elegance checks, lessons after corrections. Claude Code reads CLAUDE.md; Codex, Cursor, Cline, and Aider read AGENTS.md, which is an identical copy. Edit one, mirror the other.
 - **memory-bank/** — the agent's only persistent memory. Project brief, architecture patterns, tech context, active work, decisions, plus a monthly task log. Sessions start by reading it and end by updating it.
 
 Skills in `.claude/skills/` come along with the scaffold, so every project set up this way has the same commands. In the new-project route they're committed and travel with the repo; in the existing-project route the installer gitignores them, so each teammate installs their own copy.
@@ -35,7 +35,7 @@ The installer copies the workflow files and skips anything that already exists, 
 
 | You type | What happens |
 |---|---|
-| `startup` | Activates the flow: compliance statement, memory bank loaded, lessons reviewed |
+| `startup` | Activates the flow: startup confirmation, memory bank loaded, lessons reviewed |
 | `/init-project` | Bootstraps the structure (once per project) |
 | `/document` | Runs the DOCS state: task doc, monthly README, memory-bank updates |
 | `/lesson` | Captures a correction into `memory-bank/lessons.md` so it doesn't happen twice |
@@ -52,4 +52,4 @@ The memory bank is only as good as its upkeep. If you skip `/document` after tas
 
 ## Reference
 
-Structure taken from a live project (an MCP server for our data warehouse) where it has run since 2026-08. AGENTS.md is v2.2 and self-contained; everything the agent needs to follow the process is in that one file.
+Structure taken from a live project (an MCP server for our data warehouse) where it has run since 2026-08. WORKFLOW.md is v3.0 and self-contained; everything the agent needs to follow the process is in that one file. (v3.0 renamed AGENTS.md to WORKFLOW.md, cut the ceremony — session logs, token budgets, the worked example — and added the fast track for small fixes.)

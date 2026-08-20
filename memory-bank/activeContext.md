@@ -1,6 +1,6 @@
 # Active Context — [PROJECT NAME]
 
-Newest first. Update at every milestone, not batched at session end. This file is the compaction-recovery anchor: current state machine position and loose conversational context land here (per AGENTS.md §2).
+Newest first. Update at every milestone, not batched at session end. This file is the compaction-recovery anchor: current state machine position and loose conversational context land here (per WORKFLOW.md §2).
 
 ## YYYY-MM-DD — [milestone]
 

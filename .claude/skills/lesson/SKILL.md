@@ -15,7 +15,7 @@ Append one entry to `memory-bank/lessons.md` capturing a pattern that prevents a
    - **YYYY-MM-DD — [Rule in one bold sentence.]** [One or two sentences: what went wrong and what the rule prevents.]
    ```
    Use `**Standing — [Rule]**` for always-on principles rather than dated incidents.
-3. If the lesson is architectural or codified as a hard project rule, also add it to `memory-bank/projectRules.md` under "Hard rules (incident-backed)" — with the user's approval, since that file is approval-gated per AGENTS.md §6.
+3. If the lesson is architectural or codified as a hard project rule, also add it to `memory-bank/projectRules.md` under "Hard rules (incident-backed)" — with the user's approval, since that file is approval-gated per WORKFLOW.md §6.
 4. Read the entry back to the user in one line.
 
 ## Rules

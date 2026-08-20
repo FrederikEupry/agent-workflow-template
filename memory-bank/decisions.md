@@ -1,6 +1,6 @@
 # Decisions — [PROJECT NAME]
 
-ADRs, newest first. Add one whenever an architectural choice is made. Format per AGENTS.md §DOCS.
+ADRs, newest first. Add one whenever an architectural choice is made. Format per WORKFLOW.md §DOCS.
 
 <!-- Template:
 

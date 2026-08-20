@@ -1,6 +1,6 @@
 # Memory Bank — Table of Contents
 
-Per AGENTS.md: Fast Track loads the current month README; Standard Discovery adds the core files (marked ★).
+Per WORKFLOW.md: Fast Track loads the current month README; Standard Discovery adds the core files (marked ★).
 
 | File | What it holds |
 |---|---|
@@ -19,6 +19,6 @@ Per AGENTS.md: Fast Track loads the current month README; Standard Discovery add
 | [lessons.md](lessons.md) | Patterns learned from corrections (review at session start) |
 | tasks/YYYY-MM/README.md | Monthly task log (current) |
 
-Repo root: `AGENTS.md` (process protocol), `CLAUDE.md` (reasoning style + repo hard rules). Everything else the workflow writes lives in this folder.
+Repo root: `WORKFLOW.md` (process protocol), `CLAUDE.md` (reasoning style + repo hard rules). Everything else the workflow writes lives in this folder.
 
 <!-- init-project: add optional files here when the project needs them (e.g. database-schema.md for data-heavy projects). Update this table whenever a memory-bank file is added or removed. -->

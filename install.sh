@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Install the workflow scaffold into a target project.
 # Usage: ./install.sh /path/to/project
-# Copies AGENTS.md, CLAUDE.md, memory-bank/, and .claude/skills/,
+# Copies WORKFLOW.md, CLAUDE.md, AGENTS.md, memory-bank/, and .claude/skills/,
 # and appends those paths to the target's .gitignore so they stay local.
 # Never overwrites: existing files in the target are skipped and reported.
 
@@ -40,8 +40,9 @@ copy_file() {
   fi
 }
 
-copy_file "AGENTS.md"
+copy_file "WORKFLOW.md"
 copy_file "CLAUDE.md"
+copy_file "AGENTS.md"
 
 for f in "$SRC"/memory-bank/*.md; do
   copy_file "memory-bank/$(basename "$f")"
@@ -61,8 +62,9 @@ else
   {
     if [[ -s "$GITIGNORE" ]]; then echo; fi
     echo "$MARKER"
-    echo "/AGENTS.md"
+    echo "/WORKFLOW.md"
     echo "/CLAUDE.md"
+    echo "/AGENTS.md"
     echo "/memory-bank/"
     for skill in "$SRC"/.claude/skills/*/; do
       echo "/.claude/skills/$(basename "$skill")/"
